@@ -1,0 +1,14 @@
+# Ignoriere geklonte Fremd-Repositories in raw_sources/ (werden über setup_raw_sources.ps1 geladen)
+raw_sources/wrench-board/
+raw_sources/theEmbeddedNewTestament.github.io/
+raw_sources/Repair/
+raw_sources/electronics-datasheets/
+
+# Behalte Dokumentation in raw_sources/
+!raw_sources/repair_wiki_BLOCKED_INFO.md
+
+# Python Bytecode & OS-Junk
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db

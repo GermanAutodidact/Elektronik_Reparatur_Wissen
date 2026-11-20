@@ -1,0 +1,6 @@
+# Hinweis zum Abruf von `https://repair.wiki`
+
+- **Status:** Blockiert durch Cloudflare Anti-Bot-Challenge (`challenges.cloudflare.com`, "Just a moment... / Enable JavaScript and cookies to continue").
+- **Zeitpunkt der Prüfung:** 2026-11-18T19:17:53+01:00
+- **Begründung:** Beim Zugriff auf die MediaWiki-API (`https://repair.wiki/w/api.php`) liefert der Server eine interaktive Cloudflare-Anti-Bot-Prüfung aus. Gemäß den Sicherheits- und Systemrichtlinien werden Anti-Bot-Gates / CAPTCHAs weder über Skripte, Headless-Browser noch über Cache-Umgehungen ausgehebelt.
+- **Konsequenz für die Wissensdatenbank:** Alle Inhalte für `01_In_Circuit_Messen_und_Bauteilpruefung.md` und die übrigen Module stammen verlustfrei aus den vier vollständig geklonten Open-Source-Repositories (`aKaReZa75/Repair`, `theEmbeddedNewTestament.github.io`, `Junkz3/wrench-board`, `Vitorbnc/electronics-datasheets`) sowie den vollständigen standardisierten In-Circuit-Mess- und Bauteilprüfungs-Grundlagen (einschließlich vollständiger SMD-/EIA-96-Code- und ESR-Tabellen). Falls der Benutzer `repair.wiki`-Seiten manuell im eigenen Browser speichern und lokal ablegen möchte, können diese jederzeit in `raw_sources/repair_wiki/` nachgetragen werden.

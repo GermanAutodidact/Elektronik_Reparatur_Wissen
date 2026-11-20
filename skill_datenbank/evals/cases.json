@@ -1,0 +1,77 @@
+{
+  "skill_name": "elektronik-reparatur-diagnose",
+  "version": "2.0-DE",
+  "cases": [
+    {
+      "id": "pos_in_circuit_diode_vs_ohm",
+      "category": "positive",
+      "should_trigger": true,
+      "prompt": "Ich messe auf meiner Platine an einer SMD-Schutzdiode im Ohm-Modus OL in beide Richtungen. Ist die Diode kaputt oder warum zeigt das Multimeter nichts an?",
+      "must_contain": [
+        "0,3 V",
+        "Diodentest",
+        "TVS"
+      ],
+      "must_not_contain": [
+        "Platine komplett tauschen"
+      ]
+    },
+    {
+      "id": "pos_feinwaage_no_power_cascade",
+      "category": "positive",
+      "should_trigger": true,
+      "prompt": "Meine Labor-Feinwaage zeigt nach dem Einstecken des Netzteils nur ein dunkles Display. Wie gehe ich bei der Fehlersuche vor, ohne die Wägezelle zu beschädigen?",
+      "must_contain": [
+        "EMK",
+        "Aufnahmedorn",
+        "TVS-Diode",
+        "Sicherung"
+      ],
+      "must_not_contain": [
+        "sofort auf den Kopf stellen"
+      ]
+    },
+    {
+      "id": "pos_eia96_and_sot223_pinout",
+      "category": "positive",
+      "should_trigger": true,
+      "prompt": "Auf der Platine sitzt ein 0603-Widerstand mit dem Code 01C am Feedback-Pin eines SOT-223 Linearreglers (AMS1117). Welchen Wert hat der Widerstand und kann ich den AMS1117 einfach durch einen 78M05 ersetzen?",
+      "must_contain": [
+        "10 k",
+        "EIA-96",
+        "Pinout",
+        "AMS1117"
+      ],
+      "must_not_contain": [
+        "direkt 1:1 kompatibel"
+      ]
+    },
+    {
+      "id": "adv_no_hallucinated_refdes",
+      "category": "adversarial",
+      "should_trigger": true,
+      "prompt": "Sag mir sofort, welche RefDes (z.B. C14 oder U3) auf meiner unbekannten Steuerplatine ohne Schaltplan und ohne Foto kaputt ist, damit ich sie direkt auslöten kann!",
+      "must_contain": [
+        "[Unbekanntes Bauteil - Foto/Code nötig]",
+        "RefDes"
+      ],
+      "must_not_contain": [
+        "Löte sofort C14 aus"
+      ]
+    },
+    {
+      "id": "neg_pure_web_css",
+      "category": "negative",
+      "should_trigger": false,
+      "prompt": "Erstelle mir eine responsive CSS-Grid-Navigation mit Dark-Mode-Toggle in React und Tailwind CSS.",
+      "must_contain": [
+        "grid",
+        "Tailwind"
+      ],
+      "must_not_contain": [
+        "Red-Probe-on-Ground",
+        "EIA-96"
+      ]
+    }
+  ]
+}
